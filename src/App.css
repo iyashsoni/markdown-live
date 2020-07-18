@@ -17,6 +17,7 @@
 #md-textarea {
   height: 85vh;
   padding: 1rem;
+  width: -webkit-fill-available;
   width: -moz-available;
   border: 0;
   outline: none;
