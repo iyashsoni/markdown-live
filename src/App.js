@@ -180,7 +180,28 @@ function AppHeader() {
         height: "4rem",
       }}
     >
-      <h2 style={{ marginLeft: "1rem" }}>Markdown Live</h2>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          marginLeft: "1rem",
+        }}
+      >
+        <svg
+          width="2em"
+          height="2em"
+          viewBox="0 0 16 16"
+          className="bi bi-lightning"
+          fill="aqua"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+          />
+        </svg>
+        <h2 style={{ marginLeft: "1rem", cursor: "default" }}>Markdown Live</h2>
+      </div>
       <div
         id="fileDownloadButton"
         style={{
@@ -207,7 +228,7 @@ function AppHeader() {
           width="2em"
           height="2em"
           viewBox="0 0 16 16"
-          class="bi bi-file-arrow-down"
+          className="bi bi-file-arrow-down"
           fill="aqua"
           onClick={downloadFile}
           style={{
@@ -217,15 +238,15 @@ function AppHeader() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"
           />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M4.646 8.146a.5.5 0 0 1 .708 0L8 10.793l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"
           />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M8 4a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6A.5.5 0 0 1 8 4z"
           />
         </svg>
