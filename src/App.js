@@ -3,14 +3,124 @@ import "./App.css";
 import Markdown from "react-markdown";
 import { Col, Grid, Row } from "./styled-components";
 
-let initialValues = "# Heading 1 \n## Heading 2 \n### Heading 6 \n--- \n";
-initialValues +=
-  "#### Unordered lists: \n- item 1 \n- item 2 \n  - sub item 1 \n  - sub item 2 \n--- \n";
+let defaultText = `
+# Markdown Guide
 
-initialValues +=
-  "#### Ordered lists: \n1. item 1 \n2. item 2 \n  1. sub item 1 \n  1. sub item 2 \n--- \n";
+---
 
-initialValues += "#### Code: \n```\ncode better with code editor \n```\n";
+## Headings:
+
+There are 6 types of headings supported in Markdown using #
+
+# Heading 1 
+## Heading 2 
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
+---
+
+## Text Emphasis:
+
+I know, just a bunch of headings won't satisfy your thirst for formatting. Here you go!
+
+**Bold**
+
+*Italic*
+
+---
+
+## Lists:
+You know lists, right?
+
+#### Unordered lists: 
+- item 1 
+- item 2 
+  - sub item 1 
+  - sub item 2 
+    - sub sub item 1 
+    - sub sub item 2 
+
+#### Ordered lists: 
+1. item 1 
+1. item 2 
+   1. sub item 1 
+   1. sub item 2 
+
+--- 
+
+## Code: 
+
+For those code-mongers out there, presenting **Code Blocks**:
+
+\`\`\`
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+
+\`\`\`
+
+**Inline Code** like \`let name="Yash"\`. 
+
+---
+
+## Links:
+
+You can use links in Markdown. Use case?
+
+Curious about who made this? [This dude!](https://iyashsoni.web.app/) He's awesome 😎
+
+You can also put images, prefixing the same syntax as above with an '!' mark. 
+
+![](https://media.giphy.com/media/3ohzdIuqJoo8QdKlnW/giphy.gif)
+
+Wait, didn't I tell you this works with GIFs too? Oops! 
+
+--- 
+
+## Blockquotes:
+
+Well, generally this is used to highlight something IMPORTANT. Like a quote or something... 
+
+> But you can use it with anything, literally, no one cares. 🙂
+> > # You can have nested blockquotes with other formatting. If it looks ugly, it's on you! 
+
+---
+
+## Tables:
+
+I knew you were looking for this. Have it! 
+
+| Name      | Age     |
+| --------- | ------- |
+| Yash Soni | 26      |
+| John Doe  | 30      |
+
+---
+
+## Most important:
+
+Found something that's not right? Raise an issue [here](https://github.com/iyashsoni/markdown-live/issues).
+
+--- 
+
+## Credits: 
+
+This would not be possible without [react-markdown](https://www.npmjs.com/package/react-markdown). Thanks a ton!
+
+---
+
+Made with ❤️ in 🇮🇳
+`;
 
 const downloadFile = function () {
   const element = document.createElement("a");
@@ -25,7 +135,7 @@ const downloadFile = function () {
 };
 
 function App() {
-  const [content, setContent] = React.useState(initialValues);
+  const [content, setContent] = React.useState(defaultText);
   return (
     <React.Fragment>
       <AppHeader />
