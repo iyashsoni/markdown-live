@@ -173,6 +173,7 @@ function AppHeader() {
         position: "fixed",
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         background: "#000",
         color: "white",
         boxShadow: "0px 3px 5px 0px #a0b0b0",
@@ -202,6 +203,18 @@ function AppHeader() {
         </svg>
         <h2 style={{ marginLeft: "1rem", cursor: "default" }}>Markdown Live</h2>
       </div>
+      <a
+        href="https://www.hitwebcounter.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://hitwebcounter.com/counter/counter.php?page=7545518&style=0010&nbdigits=7&type=page&initCount=0"
+          title="Web Counter"
+          Alt="counter free"
+          border="0"
+        />
+      </a>
       <div
         id="fileDownloadButton"
         style={{
