@@ -140,8 +140,8 @@ function App() {
     <React.Fragment>
       <AppHeader />
       <Grid fluid>
-        <Row style={{ height: "100%" }}>
-          <Col sm={12} md={6} style={{ borderRight: "1px solid" }}>
+        <Row>
+          <Col sm={12} md={6} style={{ borderRight: "1px dashed grey" }}>
             <div id="md-source">
               <textarea
                 id="md-textarea"
@@ -152,7 +152,7 @@ function App() {
           </Col>
           <Col sm={12} md={6}>
             <div id="md-preview">
-              <div style={{ height: "85vh" }}>
+              <div style={{ padding: "1rem" }}>
                 <Markdown source={content} />
               </div>
             </div>
@@ -167,104 +167,97 @@ function AppHeader() {
   const [fileName, setFileName] = React.useState("README");
 
   return (
-    <div
+    <Row
       style={{
-        width: "100%",
-        position: "fixed",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
+        padding: "0 1rem 0 1rem",
         background: "#000",
         color: "white",
         boxShadow: "0px 3px 5px 0px #a0b0b0",
-        top: "0",
-        height: "4rem",
       }}
+      between="xs"
+      middle="xs"
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          marginLeft: "1rem",
-        }}
-      >
-        <svg
-          width="2em"
-          height="2em"
-          viewBox="0 0 16 16"
-          className="bi bi-lightning"
-          fill="aqua"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+      <Col md={4} xs={12}>
+        <Row start="md" center="xs" middle="xs">
+          <svg
+            width="2em"
+            height="2em"
+            viewBox="0 0 16 16"
+            className="bi bi-lightning"
+            fill="aqua"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41 4.157 8.5z"
+            />
+          </svg>
+          <h2 style={{ marginLeft: "0.5rem", cursor: "default" }}>
+            Markdown Live
+          </h2>
+        </Row>
+      </Col>
+      <Col md={4} xs={12}>
+        <Row center="xs" middle="xs">
+          Visitors:
+          <a
+            href="https://www.hitwebcounter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://hitwebcounter.com/counter/counter.php?page=7545518&style=0010&nbdigits=7&type=page&initCount=0"
+              title="Web Counter"
+              Alt="counter free"
+              border="0"
+            />
+          </a>
+        </Row>
+      </Col>
+      <Col md={4} xs={12}>
+        <Row end="md" center="xs" middle="xs">
+          <p
+            style={{
+              marginRight: "0.5rem",
+            }}
+          >
+            Filename:{" "}
+          </p>
+          <input
+            id="md-filename"
+            type="text"
+            value={fileName}
+            onChange={(event) => setFileName(event.target.value)}
           />
-        </svg>
-        <h2 style={{ marginLeft: "1rem", cursor: "default" }}>Markdown Live</h2>
-      </div>
-      <a
-        href="https://www.hitwebcounter.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="https://hitwebcounter.com/counter/counter.php?page=7545518&style=0010&nbdigits=7&type=page&initCount=0"
-          title="Web Counter"
-          Alt="counter free"
-          border="0"
-        />
-      </a>
-      <div
-        id="fileDownloadButton"
-        style={{
-          marginRight: "1rem",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <p
-          style={{
-            marginRight: "0.5rem",
-          }}
-        >
-          Filename:{" "}
-        </p>
-        <input
-          id="md-filename"
-          type="text"
-          value={fileName}
-          onChange={(event) => setFileName(event.target.value)}
-        />
-        <svg
-          width="2em"
-          height="2em"
-          viewBox="0 0 16 16"
-          className="bi bi-file-arrow-down"
-          fill="aqua"
-          onClick={downloadFile}
-          style={{
-            cursor: "pointer",
-            marginLeft: "1rem",
-          }}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"
-          />
-          <path
-            fillRule="evenodd"
-            d="M4.646 8.146a.5.5 0 0 1 .708 0L8 10.793l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"
-          />
-          <path
-            fillRule="evenodd"
-            d="M8 4a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6A.5.5 0 0 1 8 4z"
-          />
-        </svg>
-      </div>
-    </div>
+          <svg
+            width="2em"
+            height="2em"
+            viewBox="0 0 16 16"
+            className="bi bi-file-arrow-down"
+            fill="aqua"
+            onClick={downloadFile}
+            style={{
+              cursor: "pointer",
+              marginLeft: "1rem",
+            }}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"
+            />
+            <path
+              fillRule="evenodd"
+              d="M4.646 8.146a.5.5 0 0 1 .708 0L8 10.793l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"
+            />
+            <path
+              fillRule="evenodd"
+              d="M8 4a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0v-6A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+        </Row>
+      </Col>
+    </Row>
   );
 }
 

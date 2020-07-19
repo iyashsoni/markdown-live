@@ -7,8 +7,6 @@ import {
 
 export const Grid = styled(GridRoot)`
   padding: revert;
-  margin-top: 4rem;
-  height: 93vh;
 `;
 
 export const Row = styled(RowRoot)`
@@ -16,4 +14,7 @@ export const Row = styled(RowRoot)`
   margin-right: unset;
 `;
 
-export const Col = styled(ColRoot)``;
+export const Col = styled(ColRoot)`
+  padding-right: 0;
+  padding-left: 0;
+`;

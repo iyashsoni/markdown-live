@@ -2,20 +2,30 @@
 
 #md-source,
 #md-preview {
+  height: 88vh;
   margin: 1rem;
   overflow: auto;
   scrollbar-width: thin;
   scroll-behavior: smooth;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  outline: none;
+  resize: none;
+  font-size: 18px;
+  background: lightcyan;
+  border-radius: 10px;
+  border: 1px solid aqua;
 }
 
 #md-filename {
   font-family: "Nunito Sans", sans-serif;
   border: 0;
   outline: none;
+  width: 6rem;
 }
 
 #md-textarea {
-  height: 85vh;
+  height: 100%;
   padding: 1rem;
   width: -webkit-fill-available;
   width: -moz-available;
@@ -24,14 +34,13 @@
   resize: none;
   font-size: 18px;
   background: lightcyan;
-  border-radius: 10px;
-  border: 1px solid aqua;
   scrollbar-width: thin;
   scroll-behavior: smooth;
 }
 
 #md-preview img {
-  width: 100%;
+  width: -webkit-fill-available;
+  width: -moz-available;
 }
 
 #md-preview pre code {
