@@ -43,6 +43,10 @@
   width: -moz-available;
 }
 
+#md-preview p {
+  line-height: 2rem;
+}
+
 #md-preview pre code {
   display: block;
 }
