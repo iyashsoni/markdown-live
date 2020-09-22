@@ -1,5 +1,6 @@
 {
   "name": "markdown-live",
+  "author": "Yash Soni",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
