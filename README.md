@@ -12,7 +12,7 @@ Found something that's not right? Raise an issue [here](https://github.com/iyash
 --- 
 ## Want to contribute?
 
-Contact [Yash Soni](https://iyashsoni.web.app)
+Contact [Yash Soni] (https://iyashsoni.web.app)
 
 ---
 ## Credits: 
