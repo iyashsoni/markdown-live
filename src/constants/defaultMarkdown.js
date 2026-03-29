@@ -20,7 +20,7 @@ export const DEFAULT_MARKDOWN = `# Markdown Live 2.0 ⚡
 
 ### Text
 
-**Bold**, *italic*, ~~strike~~, and \\`inline code\\`.
+**Bold**, *italic*, ~~strike~~, and \`inline code\`.
 
 ### Lists
 
@@ -38,10 +38,10 @@ export const DEFAULT_MARKDOWN = `# Markdown Live 2.0 ⚡
 
 ### Code
 
-\\`\\`\\`js
+\`\`\`js
 const message = "Built with ❤️ in India";
 console.log(message);
-\\`\\`\\`
+\`\`\`
 
 ---
 
