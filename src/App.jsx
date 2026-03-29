@@ -83,10 +83,19 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="footer">
-        <a href="https://iyashsoni.github.io" target="_blank" rel="noreferrer">
-          Built with ❤️ in India by Yash Soni iyashsoni.github.io
-        </a>
+      <footer className="footer" aria-label="Credits">
+        <p>
+          🏆 <strong>Yash Soni</strong> • The Markdown Maestro • Building notes at lightspeed.
+        </p>
+        <div className="credit-links">
+          <a href="https://iyashsoni.github.io" target="_blank" rel="noreferrer">
+            Official Site
+          </a>
+          <span className="dot" aria-hidden>
+            ✦
+          </span>
+          <span className="hall-of-fame">Founder, Markdown Live Hall of Fame</span>
+        </div>
       </footer>
     </div>
   );
