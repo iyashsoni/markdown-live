@@ -1,23 +1,28 @@
-![](/assets/banner.png)
----
-## Status:
+# Markdown Live 2.0
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a5f9614d-e8bf-492f-b7df-8390c627a931/deploy-status)](https://app.netlify.com/sites/markdown-live/deploys)
+A modern, elegant and blazing-fast local-first markdown editor.
 
----
-## Most important:
+## Highlights
 
-Found something that's not right? Raise an issue [here](https://github.com/iyashsoni/markdown-live/issues).
+- ⚡ **Fast loading** with Vite + React 19
+- 🔐 **Safer preview** using `rehype-sanitize`
+- ✅ **GitHub-flavored Markdown** with `remark-gfm`
+- 💾 **Local persistence** via `localStorage`
+- 📋 **Copy**, 📁 **Import**, and 📤 **Export** Markdown workflows
+- 🌗 **Light/Dark mode** toggle
+- 📊 **Live stats** (word count, character count, reading time)
+- ℹ️ Explicit notice: **Everything stored locally - no server involved**
 
---- 
-## Want to contribute?
+## Run locally
 
-Contact [Yash Soni] (https://iyashsoni.web.app)
+```bash
+npm install
+npm run dev
+```
 
----
-## Credits: 
+## Build
 
-This would not be possible without [react-markdown](https://www.npmjs.com/package/react-markdown). Thanks a ton!
-
----
-Made with ❤️ in 🇮🇳
+```bash
+npm run build
+npm run preview
+```
